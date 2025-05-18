@@ -1,0 +1,9 @@
+Before running this project, ensure you have:
+
+- AWS account with admin-level access
+- IAM user credentials with:
+  - EC2, RDS, VPC, IAM, and Terraform permissions
+- [Terraform installed](https://developer.hashicorp.com/terraform/downloads)
+- AWS CLI installed and configured:
+```bash
+aws configure
