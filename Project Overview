@@ -1,0 +1,5 @@
+This project demonstrates the deployment of a multi-tier architecture on AWS using Terraform. It includes:
+
+- **Web Tier** (EC2 instance running Apache)
+- **Database Tier** (RDS MySQL instance)
+- **Infrastructure Automation** (Terraform modules)
