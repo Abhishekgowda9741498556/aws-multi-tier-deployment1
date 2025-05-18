@@ -1,0 +1,10 @@
+aws-multi-tier-deployment/
+├── terraform/
+│   ├── ec2.tf            # EC2 instance setup
+│   ├── rds.tf            # RDS instance setup
+│   ├── variables.tf      # Input variables
+│   ├── outputs.tf        # Output definitions
+├── scripts/
+│   └── install-app.sh    # Apache auto-install script
+├── README.md
+├── MANUAL.md             # This guide
