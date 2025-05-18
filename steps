@@ -1,0 +1,62 @@
+🪜 Steps to Deploy
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/YOUR_USERNAME/aws-multi-tier-deployment.git
+cd aws-multi-tier-deployment
+2. Customize Variables
+Open terraform/variables.tf and replace with your values:
+
+hcl
+Copy
+Edit
+variable "ami_id"       { default = "ami-xxxxxx" }
+variable "instance_type"{ default = "t2.micro" }
+variable "key_name"     { default = "your-key-pair" }
+variable "db_name"      { default = "mydb" }
+variable "db_user"      { default = "admin" }
+variable "db_password"  { default = "password123" }
+Or use a terraform.tfvars file to pass them.
+
+3. Initialize Terraform
+bash
+Copy
+Edit
+cd terraform/
+terraform init
+4. Review Execution Plan
+bash
+Copy
+Edit
+terraform plan
+5. Apply Configuration
+bash
+Copy
+Edit
+terraform apply
+Type yes to confirm when prompted.
+
+6. Verify Output
+After deployment, Terraform will output:
+
+Public IP of the web server
+
+EC2 and RDS resource details
+
+Visit http://<public-ip> to see your deployed Apache page.
+
+🧹 Cleanup
+To destroy all resources:
+
+bash
+Copy
+Edit
+terraform destroy
+🛠️ Troubleshooting
+No public IP? Ensure your subnet has map_public_ip_on_launch = true
+
+Access denied? Check your IAM permissions
+
+App not reachable? Check security group for port 80 inbound rules
+
